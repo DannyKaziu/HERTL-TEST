@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hertl Clone</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
 </head>
 <body>
   <div class="container">
     <div class="editor">
-      <textarea id="htmlEditor" placeholder="Write your HTML here..."></textarea>
-      <textarea id="cssEditor" placeholder="Write your CSS here..."></textarea>
-      <textarea id="jsEditor" placeholder="Write your JavaScript here..."></textarea>
+      <div id="htmlEditor"></div>
+      <div id="cssEditor"></div>
+      <div id="jsEditor"></div>
     </div>
     <div class="preview">
       <iframe id="preview"></iframe>
