@@ -17,10 +17,10 @@ let guessesLeft = 8;
 remainingGuesses.textContent = `Remaining guesses: ${guessesLeft}`;
 
 function submit() {
-  const guess = playerGuess.value.trim();
+  const guess = playerGuess.value.trim().toLowerCase(); // Convert the guess to lowercase
 
   if (guessesLeft > 0) {
-    if (guess.toLowerCase() === randomPlayer.toLowerCase()) {
+    if (guess === randomPlayer.toLowerCase()) { // Convert the actual player name to lowercase
       gameMessage.textContent = "Congratulations! You guessed the correct player!";
       gameMessage.style.color = "green";
       submitGuess.disabled = true;
@@ -39,13 +39,3 @@ function submit() {
     playerGuess.value = "";
   }
 }
-
-// Register the submit function for the button click event
-submitGuess.addEventListener("click", submit);
-
-// Register the submit function for the "Enter" keypress event
-playerGuess.addEventListener("keypress", (event) => {
-  if (event.key === "Enter") {
-    submit();
-  }
-});
