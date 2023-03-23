@@ -3,25 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hertl Clone</title>
+  <title>NHL Player Guessing Game</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.13.1/less.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.sync.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
 </head>
 <body>
   <div class="container">
-    <div class="editor">
-      <div id="htmlEditor"></div>
-      <div id="cssEditor"></div>
-      <div id="jsEditor"></div>
-    </div>
-    <div class="preview">
-      <iframe id="preview"></iframe>
-    </div>
+    <h1>NHL Player Guessing Game</h1>
+    <p>Guess the NHL player:</p>
+    <input type="text" id="playerGuess" placeholder="Enter player name...">
+    <button id="submitGuess">Submit Guess</button>
+    <p id="gameMessage"></p>
+    <p id="remainingGuesses"></p>
   </div>
-  <button id="saveSnippet">Save Snippet</button>
   <script src="script.js"></script>
 </body>
 </html>
