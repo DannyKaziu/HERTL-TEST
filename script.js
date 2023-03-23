@@ -16,7 +16,7 @@ let guessesLeft = 8;
 
 remainingGuesses.textContent = `Remaining guesses: ${guessesLeft}`;
 
-submitGuess.addEventListener("click", () => {
+function submit() {
   const guess = playerGuess.value.trim();
 
   if (guessesLeft > 0) {
@@ -35,4 +35,17 @@ submitGuess.addEventListener("click", () => {
         gameMessage.style.color = "orange";
       }
     }
-    remainingGuesses
+    remainingGuesses.textContent = `Remaining guesses: ${guessesLeft}`;
+    playerGuess.value = "";
+  }
+}
+
+// Register the submit function for the button click event
+submitGuess.addEventListener("click", submit);
+
+// Register the submit function for the "Enter" keypress event
+playerGuess.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    submit();
+  }
+});
